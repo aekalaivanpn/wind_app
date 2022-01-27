@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_app/hot_page.dart';
+import 'package:video_app/sidebar_menu.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,10 +15,9 @@ class _HomePageState extends State<HomePage> {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
+        drawer: const SidebarMenu(),
         appBar: AppBar(
           title: const Text('WIND'),
-          leading: IconButton(
-              onPressed: () {}, icon: const Icon(Icons.menu_rounded)),
           actions: [
             IconButton(
                 onPressed: () {}, icon: const Icon(Icons.search_rounded)),
